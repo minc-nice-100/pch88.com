@@ -69,7 +69,7 @@
 
       if (addToHistory !== false) {
         var url = pageName === 'home' ? '/' : '/#' + pageName;
-        history.pushState({ page: pageName }, '', url);
+        try { history.pushState({ page: pageName }, '', url); } catch(e) { /* file:// */ }
       }
 
       setTimeout(function() {
@@ -137,9 +137,9 @@
     var hash = window.location.hash.replace('#', '');
     if (hash && document.getElementById('page-' + hash)) {
       navigateTo(hash, false);
-      history.replaceState({ page: hash }, '', '/#' + hash);
+      try { history.replaceState({ page: hash }, '', '/#' + hash); } catch(e) { /* file:// */ }
     } else {
-      history.replaceState({ page: 'home' }, '', '/');
+      try { history.replaceState({ page: 'home' }, '', '/'); } catch(e) { /* file:// */ }
     }
   })();
 
@@ -148,25 +148,26 @@
      ========================================================== */
   function initAudio() {
     if (audioStarted) return;
+    audioStarted = true;
     audio.volume = parseFloat(volumeSlider.value);
     audio.play().then(function() {
-      audioStarted = true;
-      playerBtn.textContent = '⏸';   /* ⏸ */
+      playerBtn.textContent = '⏸';
       playerBtn.classList.add('playing');
       playerWave.classList.add('animating');
     }).catch(function() {
-      /* Autoplay blocked — user must interact */
-      playerBtn.textContent = '▶';   /* ▶ */
+      /* Autoplay blocked — button stays ▶, next click will try play() directly */
+      playerBtn.textContent = '▶';
     });
   }
 
   playerBtn.addEventListener('click', function() {
     if (!audioStarted) { initAudio(); return; }
     if (audio.paused) {
-      audio.play();
-      playerBtn.textContent = '⏸';
-      playerBtn.classList.add('playing');
-      playerWave.classList.add('animating');
+      audio.play().then(function() {
+        playerBtn.textContent = '⏸';
+        playerBtn.classList.add('playing');
+        playerWave.classList.add('animating');
+      }).catch(function() { /* ignore */ });
     } else {
       audio.pause();
       playerBtn.textContent = '▶';
@@ -179,11 +180,11 @@
     audio.volume = parseFloat(volumeSlider.value);
   });
 
-  /* Try autoplay on first user interaction */
+  /* Try autoplay on first user interaction (scroll/keyboard only — not click, to avoid
+     interfering with the player button's own click handler) */
   function autoplayOnInteraction() {
     if (!audioStarted) initAudio();
   }
-  document.addEventListener('click', autoplayOnInteraction, { once: true });
   document.addEventListener('scroll', autoplayOnInteraction, { once: true });
   document.addEventListener('keydown', autoplayOnInteraction, { once: true });
 

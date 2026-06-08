@@ -20,8 +20,8 @@
   --shadow-md: 0 4px 20px rgba(58,50,38,0.12);
   --shadow-lg: 0 12px 40px rgba(58,50,38,0.18);
   --radius: 6px;
-  --nav-h: 64px;
-  --player-h: 52px;
+  --nav-h: 56px;
+  --player-h: 48px;
   --font-display: "Noto Serif SC", "Source Han Serif SC", "SimSun", "STSong", serif;
   --font-body: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Hiragino Sans GB", sans-serif;
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -47,7 +47,7 @@ body::after {
   content: '';
   position: fixed;
   inset: 0;
-  z-index: 9999;
+  z-index: 1;
   pointer-events: none;
   opacity: 0.035;
   background-image:
@@ -549,16 +549,6 @@ body::after {
 }
 .era-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.6rem; }
 
-/* --- Decorative GIFs --- */
-.decorative-gif {
-  display: block;
-  margin: 2rem auto;
-  opacity: 0.55;
-  filter: sepia(0.4);
-  max-width: 100%;
-  height: auto;
-}
-
 /* --- About Grid --- */
 .about-grid {
   display: grid;
@@ -701,13 +691,16 @@ body::after {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
+  :root {
+    --nav-h: 48px;
+    --player-h: 44px;
+  }
   .site-nav {
     justify-content: flex-start;
-    overflow-x: auto;
     gap: 0.3rem;
     padding: 0 0.8rem;
   }
-  .nav-link { font-size: 0.78rem; padding: 0.3rem 0.5rem; }
+  .nav-link { font-size: 0.78rem; padding: 0.25rem 0.5rem; }
   .nav-toggle { display: block; }
 
   .site-nav .nav-links {

@@ -1,0 +1,12 @@
+---
+# Main Sass entry point — Jekyll processes this into css/style.css
+---
+@import "variables";
+@import "reset";
+@import "nav";
+@import "hero";
+@import "sections";
+@import "components";
+@import "audio";
+@import "animations";
+@import "responsive";

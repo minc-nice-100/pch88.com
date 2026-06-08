@@ -1,0 +1,96 @@
+/* ============================================================
+   Audio Player
+   ============================================================ */
+
+.audio-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  height: var(--player-h);
+  background: rgba(248,243,232,0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(180,160,130,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1.5rem;
+  font-size: 0.85rem;
+}
+
+.player-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--rust);
+  background: transparent;
+  color: var(--rust);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+
+  &:hover { background: var(--rust); color: #fff; }
+  &.playing { background: var(--rust); color: #fff; }
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.player-title {
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-artist {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.player-wave {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 20px;
+  opacity: 0.5;
+
+  &.animating .bar { animation: wave 1.2s ease-in-out infinite; }
+
+  .bar {
+    width: 3px;
+    background: var(--rust);
+    border-radius: 2px;
+    transition: height 0.3s;
+
+    &:nth-child(1) { height: 8px; animation-delay: 0s; }
+    &:nth-child(2) { height: 14px; animation-delay: 0.15s; }
+    &:nth-child(3) { height: 10px; animation-delay: 0.3s; }
+    &:nth-child(4) { height: 16px; animation-delay: 0.45s; }
+    &:nth-child(5) { height: 6px; animation-delay: 0.6s; }
+  }
+}
+
+.player-volume {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  input[type="range"] {
+    width: 60px;
+    accent-color: var(--rust);
+    height: 3px;
+  }
+}

@@ -1,0 +1,32 @@
+<!-- Page: Colophon -->
+{% assign site_data = site.data.site %}
+<section class="page-section" id="page-colophon">
+  <div class="section-inner">
+    <h2 class="section-h2">关于本站</h2>
+    <div class="section-ornament"></div>
+    <p class="section-h2-en">About This Site</p>
+
+    <div class="story-block fade-up">
+      <p class="lead">这个网站是对 pch88.com（蓬城交友中心）的致敬与纪念。它不是一个复原——它是站在 2026 年，回望 1999 年的一次凝视。</p>
+      <p>2026 年，创始人的儿子重新注册了 pch88.com 和 鹏城.com 两个域名。他通过 Internet Archive 的 Wayback Machine 找到了当年的网站页面，并将这些"数字考古"的成果呈现在这里。</p>
+      <p>对于中国大陆的访客而言，Wayback Machine 本身无法直接访问。因此，这个网站也承担了一个特殊的使命：让那些无法看到原始存档的人，得以一窥 20 多年前中国互联网的模样。</p>
+      <p>网站采用了 PJAX 技术——页面切换时背景音乐不会中断。这是对那个年代的致敬：在 Web 1.0 时代，网站开发者们用各种巧妙的方式突破技术的限制，创造出了丰富多彩的互联网世界。</p>
+    </div>
+
+    <div class="about-grid stagger" style="margin-top:2.5rem;">
+      {% for card in site_data.colophon_cards %}
+        <div class="about-card fade-up"><div class="icon">{{ card.icon }}</div><h4>{{ card.title }}</h4><p>{{ card.desc }}</p></div>
+      {% endfor %}
+    </div>
+
+    <footer class="site-footer">
+      <div style="margin-bottom:1rem;">
+        <a href="{{ site_data.wayback.earliest_url }}" target="_blank" rel="noopener" class="wayback-link">📦 在 Wayback Machine 中查看原始网站</a>
+        <a href="{{ site_data.wayback.all_snapshots_url }}" target="_blank" rel="noopener" class="wayback-link">📅 查看全部 {{ site_data.wayback.snapshot_count }} 次存档</a>
+      </div>
+      <p>本页面是对 pch88.com（蓬城交友中心）的致敬与纪念。<br>原始网站成立于 1999–2000 年，由五邑大学蓬城俱乐部创建。<br>所有历史资料来源于 Internet Archive 的 Wayback Machine。</p>
+      <p class="nostalgic">2000 © 蓬城交友中心版权所有 · 建议使用 IE 或 NETSCAPE 4.0 以上版本进行浏览，最佳显示 800×600</p>
+      <p style="margin-top:1.5rem;font-size:0.75rem;">—— 谨以此页，献给中国互联网的青春 ——</p>
+    </footer>
+  </div>
+</section>

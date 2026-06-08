@@ -1,0 +1,14 @@
+<!-- Navigation -->
+<nav class="site-nav" id="siteNav">
+  <a class="nav-link nav-home active" data-page="home">蓬城</a>
+  <div class="nav-links" id="navLinks">
+    {% for item in site.data.navigation %}
+      {% unless item.home %}
+        <a class="nav-link" data-page="{{ item.id }}">{{ item.label }}</a>
+      {% endunless %}
+    {% endfor %}
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="菜单">
+    <span></span><span></span><span></span>
+  </button>
+</nav>

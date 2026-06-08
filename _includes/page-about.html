@@ -1,0 +1,37 @@
+<!-- Page: About -->
+{% assign site_data = site.data.site %}
+<section class="page-section" id="page-about">
+  <div class="section-inner">
+    <h2 class="section-h2">关于蓬城</h2>
+    <div class="section-ornament"></div>
+    <p class="section-h2-en">About Pengcheng</p>
+
+    <div class="story-block fade-up">
+      <p class="lead">蓬城交友中心是江门五邑大学蓬城俱乐部旗下的网络交友平台，成立于 1999 年末或 2000 年初，是中国最早的校园 SNS 之一。</p>
+      <p>网站采用 ASP（Active Server Pages）技术构建，运行在 Windows NT 服务器上。在那个拨号上网、56K 调制解调器发出刺耳握手声的年代，打开一个网页需要几十秒——但每一次连接都充满仪式感。</p>
+      <p>网站设有蓬城社区（BBS）、聊天室、留言簿、娱乐星闻、个人专栏、网友总览、网际寻友、相片上传等栏目。会员可以通过性别、年龄、职业等条件筛选好友——在 QQ 号还只有 6 位数的年代，这是最潮的社交方式。</p>
+      <p>根据 Wayback Machine 2001 年 3 月 8 日的存档，当时网站已有 <strong>4,139 名注册会员</strong>，设有"本期最佳女主角"（妖妃，21岁，江门）、"本期最佳男主角"（型男，22岁，江门阳春）等人气评选，以及人气排行榜（小丽 50 票、小嫦 33 票、eiffel 15 票）。</p>
+    </div>
+
+    <h3 style="font-family:var(--font-display);text-align:center;margin:2rem 0 1.5rem;font-size:1.2rem;">网站功能剪影</h3>
+    <div class="about-grid stagger">
+      {% for f in site_data.features %}
+        <div class="about-card fade-up"><div class="icon">{{ f.icon }}</div><h4>{{ f.title }}</h4><p>{{ f.desc }}</p></div>
+      {% endfor %}
+    </div>
+
+    <div class="stats-row fade-up" style="margin-top:2.5rem;">
+      {% for s in site_data.about_stats %}
+        <div class="stat-item"><div class="stat-num">{{ s.num }}</div><div class="stat-lbl">{{ s.label }}</div></div>
+      {% endfor %}
+    </div>
+
+    <div class="story-block fade-up">
+      <h3 style="font-family:var(--font-display);font-size:1.15rem;margin-bottom:1rem;">创始团队</h3>
+      {% for m in site_data.team %}
+        <p><strong>{{ m.name }}</strong>{% if m.nickname %}（{{ m.nickname }}）{% endif %} —— {{ m.contact }}</p>
+      {% endfor %}
+      <p style="margin-top:0.8rem;font-size:0.85rem;color:var(--muted);">四位创始人的联系方式——信箱编号和寻呼机号码——本身就是一部通讯史的缩影。</p>
+    </div>
+  </div>
+</section>

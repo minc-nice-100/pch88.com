@@ -1,0 +1,52 @@
+/* ============================================================
+   Responsive Styles
+   ============================================================ */
+
+@media (max-width: 768px) {
+  :root {
+    --nav-h: 48px;
+    --player-h: 44px;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+    gap: 0.3rem;
+    padding: 0 0.8rem;
+  }
+
+  .nav-link { font-size: 0.78rem; padding: 0.25rem 0.5rem; }
+  .nav-toggle { display: block; }
+
+  .site-nav .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    background: rgba(248,243,232,0.98);
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.3rem;
+    border-bottom: 1px solid var(--gold-light);
+    box-shadow: var(--shadow-md);
+
+    &.open { display: flex; }
+  }
+
+  .era-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .stats-row { gap: 1.5rem; }
+  .stat-num { font-size: 2rem; }
+  .frame-body { flex-direction: column; }
+  .frame-info { flex: none; }
+  .founder-post { padding: 1.5rem 1.2rem; }
+  .founder-post-body { font-size: 0.95rem; }
+  .section-inner { padding: 2rem 1.2rem 3rem; }
+  .player-volume { display: none; }
+}
+
+@media (max-width: 400px) {
+  .hero-tagline { font-size: 1.6rem; }
+  .hero-poem { font-size: 0.85rem; }
+  .nav-link { font-size: 0.7rem; }
+}

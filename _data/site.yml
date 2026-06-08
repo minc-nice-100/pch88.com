@@ -1,0 +1,137 @@
+# Site metadata
+title: 鹏城 — 蓬城交友中心
+tagline: 蓬城交友中心
+subtitle: pch88.com · 鹏城.com
+founded: 1999
+domain: pch88.com
+domain_cn: 鹏城.com
+
+# Founder info
+founder:
+  name: 伍柳昌
+  nickname: 乌拉草
+  school: 五邑大学
+  mailbox: AP99081
+
+# Founding team
+team:
+  - name: 伍柳昌
+    nickname: 乌拉草
+    role: 蓬城俱乐部核心成员
+    contact: 联系信箱 AP99081，五邑大学
+  - name: 吴锋成
+    role: 联合创始人
+    contact: 呼机号：95938-315435
+  - name: 苏华胜
+    role: 联合创始人
+    contact: 呼机号：95916-565610
+  - name: 廖海涛
+    role: 网站设计与广告业务
+    contact: 江门教育学院，呼机号：95800-2086170
+
+# Stats
+stats:
+  - num: 1999
+    label: 网站成立
+  - num: "4,139"
+    label: 注册会员
+  - num: 7
+    label: 江门高校
+  - num: 73
+    label: 时光机存档
+  - num: 26+
+    label: 年历史跨度
+
+# Audio
+audio:
+  title: 那些花儿
+  artist: 朴树
+  file: assets/naxiehuaer.mp3
+  year: 1999
+
+# Wayback Machine
+wayback:
+  earliest_url: https://web.archive.org/web/20010308192901/http://www.pch88.com/
+  all_snapshots_url: https://web.archive.org/web/*/http://www.pch88.com/
+  snapshot_count: 73
+
+# Screenshots
+screenshots:
+  - date: 2001年3月8日
+    file: assets/2001.3.8.png
+    url: web.archive.org/web/20010308192901/http://www.pch88.com/
+    caption: 蓬城交友中心 · 2001年3月8日 · Wayback Machine
+    info:
+      title: 2001 年 3 月 8 日
+      intro: 这是 Wayback Machine 保存的最早的蓬城交友中心快照。此时网站正处于黄金时代——
+      details:
+        - "会员总数：4,139 人"
+        - "最佳女主角：妖妃"
+        - "最佳男主角：型男"
+        - "人气榜：小丽(50)"
+        - "友情链接：98数学班"
+  - date: 2002年4月2日
+    file: assets/2002.4.2.png
+    url: web.archive.org/web/20020402*/http://www.pch88.com/
+    caption: 蓬城交友中心 · 2002年4月2日 · Wayback Machine
+    info:
+      title: 2002 年 4 月 2 日
+      intro: 一年后的蓬城网站。页面结构保持稳定，内容持续更新。此时的中国互联网正在经历第一波泡沫后的复苏——
+      details:
+        - "QQ 注册用户突破 1 亿"
+        - "中国网民约 4,580 万"
+        - "博客概念刚刚传入中国"
+
+# Original assets gallery
+original_assets:
+  - file: assets/logo.jpg
+    caption: Logo · 208×80px
+  - file: assets/holiday.gif
+    caption: 情人节特辑横幅
+
+# About features
+features:
+  - icon: 💬
+    title: 蓬城社区
+    desc: BBS 论坛时代的缩影。在没有朋友圈的年代，这里是年轻人分享生活、交流思想的数字广场。
+  - icon: 💕
+    title: 网际寻友
+    desc: 按性别、年龄、职业筛选好友。在 QQ 号还只有 6 位数的年代，这是最潮的社交方式。
+  - icon: 📷
+    title: 相片上传
+    desc: 在 56K 猫的时代，上传一张照片需要勇气和耐心。每一张模糊的 JPEG 都是珍贵的数字记忆。
+  - icon: 💬
+    title: 聊天室
+    desc: 基于 ASP 的实时聊天室。没有表情包，没有语音，只有文字——但足以让五邑大学的夜晚不再寂寞。
+  - icon: 📝
+    title: 留言簿
+    desc: Guestbook——Web 1.0 时代的标志性功能。每一条留言都是公开的，每一个签名都带着那个年代特有的真诚。
+  - icon: 🎬
+    title: 娱乐星闻
+    desc: 刘德华、梁朝伟、周润发争影帝；谢霆锋拍可口可乐广告——2001 年的娱乐圈，通过这个小小的页面传到了江门大学生的屏幕前。
+
+# About stats
+about_stats:
+  - num: 4
+    label: 创始人
+  - num: 7
+    label: 覆盖高校
+  - num: "4,139"
+    label: 注册会员
+  - num: 2000
+    label: 创办年份
+
+# Colophon cards
+colophon_cards:
+  - icon: 🎵
+    title: 背景音乐
+    desc: 朴树《那些花儿》—— 一首属于那个时代的歌。1999 年发行，与蓬城交友中心同岁。
+  - icon: 📦
+    title: 历史资料
+    desc: 所有截图和原始素材来源于 Internet Archive 的 Wayback Machine，共 73 次存档记录。
+  - icon: 🔗
+    title: 域名
+    desc: pch88.com · 鹏城.com —— 两个域名于 2026 年由创始人儿子重新注册。
+  - icon: 💡
+    title: 技术
+    desc: HTML + CSS + JS，PJAX 导航 + History API。无需服务器，纯静态部署。

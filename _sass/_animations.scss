@@ -1,0 +1,43 @@
+/* ============================================================
+   Scroll Animations & Keyframes
+   ============================================================ */
+
+/* Float animation for scroll hint */
+@keyframes float {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+    opacity: 1;
+  }
+}
+
+/* Wave animation for audio player */
+@keyframes wave {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.4); }
+}
+
+/* Fade-up scroll reveal */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger children */
+.stagger {
+  > *:nth-child(1) { transition-delay: 0s; }
+  > *:nth-child(2) { transition-delay: 0.1s; }
+  > *:nth-child(3) { transition-delay: 0.2s; }
+  > *:nth-child(4) { transition-delay: 0.3s; }
+  > *:nth-child(5) { transition-delay: 0.4s; }
+  > *:nth-child(6) { transition-delay: 0.5s; }
+}

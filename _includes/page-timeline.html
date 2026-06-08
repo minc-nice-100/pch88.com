@@ -1,0 +1,38 @@
+<!-- Page: Timeline -->
+<section class="page-section" id="page-timeline-page">
+  <div class="section-inner">
+    <h2 class="section-h2">时代回响</h2>
+    <div class="section-ornament"></div>
+    <p class="section-h2-en">Echoes of an Era</p>
+
+    <div class="story-block fade-up">
+      <p class="lead">蓬城交友中心的故事，恰好映射了中国互联网从萌芽到繁荣的整个历程。一个校园网站的生与灭，是一个时代的注脚。</p>
+    </div>
+
+    <div class="timeline stagger">
+      {% for item in site.data.timeline %}
+        <div class="tl-item{% if item.highlight %} highlight{% endif %} fade-up">
+          <div class="tl-year">{{ item.year }}</div>
+          <div class="tl-title">{{ item.title }}</div>
+          <div class="tl-desc">{{ item.desc }}</div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <h3 style="font-family:var(--font-display);text-align:center;margin:3rem 0 1.5rem;font-size:1.2rem;">两个时代的对话</h3>
+    <div class="era-grid stagger">
+      <div class="era-card fade-up">
+        <h3>1999 年的互联网</h3>
+        <p>拨号上网，56K 猫发出刺耳的握手声。打开一个网页需要几十秒，图片一行一行地加载。但每一次连接都充满仪式感。</p>
+        <p>"网友"是一个神秘而浪漫的词汇。人们在聊天室里用文字认识彼此，在留言簿上写下真诚的问候。没有算法推荐，没有信息茧房——你看到什么，取决于你点击了什么。</p>
+        <p>蓬城交友中心的 4139 名会员，就是这第一批"数字移民"的缩影。</p>
+      </div>
+      <div class="era-card fade-up">
+        <h3>今天的互联网</h3>
+        <p>5G、光纤、Wi-Fi 6。网页秒开，视频即播。我们拥有了蓬城创始人们无法想象的技术能力。</p>
+        <p>但我们也失去了一些东西：那种拨号上网的期待感，那种在聊天室里偶遇陌生人的惊喜，那种在留言簿上看到新回复的快乐。</p>
+        <p>蓬城交友中心提醒我们：互联网的初心，是连接人与人。</p>
+      </div>
+    </div>
+  </div>
+</section>

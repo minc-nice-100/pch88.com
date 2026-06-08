@@ -1,0 +1,26 @@
+/* ============================================================
+   pch88.com — CSS Custom Properties
+   ============================================================ */
+
+:root {
+  --paper: #f8f3e8;
+  --paper-dark: #ede4d3;
+  --ink: #3a3226;
+  --ink-light: #5c5242;
+  --muted: #8b7d6b;
+  --rust: #c75b39;
+  --rust-dark: #a04028;
+  --rust-light: #e8a87c;
+  --gold: #b8956a;
+  --gold-light: #d4c5a9;
+  --cream: #faf6ee;
+  --shadow-sm: 0 1px 3px rgba(58,50,38,0.08);
+  --shadow-md: 0 4px 20px rgba(58,50,38,0.12);
+  --shadow-lg: 0 12px 40px rgba(58,50,38,0.18);
+  --radius: 6px;
+  --nav-h: 56px;
+  --player-h: 48px;
+  --font-display: "Noto Serif SC", "Source Han Serif SC", "SimSun", "STSong", serif;
+  --font-body: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Hiragino Sans GB", sans-serif;
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}

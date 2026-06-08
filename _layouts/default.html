@@ -1,0 +1,23 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ site.title }} · {{ site.data.site.founded }}–2026</title>
+<link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+</head>
+<body>
+
+{% include nav.html %}
+
+{{ content }}
+
+{% include lightbox.html %}
+{% include audio-player.html %}
+
+<script src="{{ '/js/app.js' | relative_url }}"></script>
+</body>
+</html>

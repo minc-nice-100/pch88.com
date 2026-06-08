@@ -1,0 +1,260 @@
+/* ============================================================
+   Components: Founder Post, Screenshot Frames, Lightbox
+   ============================================================ */
+
+/* Founder Post (创始人说) */
+.founder-post {
+  position: relative;
+  background: var(--cream);
+  border: 1px solid var(--gold-light);
+  border-radius: 10px;
+  padding: 2.5rem 2rem;
+  margin: 2.5rem 0;
+  box-shadow: var(--shadow-md);
+
+  &::before {
+    content: '"';
+    position: absolute;
+    top: -0.5rem;
+    left: 1.5rem;
+    font-family: Georgia, "Noto Serif SC", serif;
+    font-size: 6rem;
+    color: var(--rust);
+    opacity: 0.15;
+    line-height: 1;
+    pointer-events: none;
+  }
+}
+
+.founder-post-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(180,160,130,0.3);
+}
+
+.founder-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--rust-light), var(--rust));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.founder-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.founder-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.founder-post-body {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 2.1;
+  color: var(--ink);
+
+  .highlight {
+    color: var(--rust);
+    font-weight: 700;
+  }
+}
+
+.founder-post-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(180,160,130,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+
+  .tag {
+    display: inline-block;
+    background: rgba(199,91,57,0.08);
+    color: var(--rust);
+    padding: 0.15rem 0.7rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Screenshot Frames (时光印记) */
+.screenshot-frame {
+  background: #fffef9;
+  border: 1px solid var(--gold-light);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin: 2.5rem 0;
+  transition: transform 0.35s, box-shadow 0.35s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+
+    .frame-zoom-hint { opacity: 1; }
+  }
+}
+
+.frame-toolbar {
+  background: #e8e0d0;
+  padding: 0.55rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  user-select: none;
+}
+
+.frame-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+
+  &.r { background: #e06c5c; }
+  &.y { background: #e0c85c; }
+  &.g { background: #6cba6c; }
+}
+
+.frame-url {
+  margin-left: 0.5rem;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.frame-body {
+  padding: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+}
+
+.frame-img-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 260px;
+}
+
+.frame-info {
+  flex: 0 0 220px;
+  font-size: 0.85rem;
+  color: var(--muted);
+
+  h4 {
+    font-size: 1rem;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+    font-family: var(--font-display);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 0.3rem;
+
+    &::before {
+      content: '▸ ';
+      color: var(--rust);
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.frame-zoom-hint {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.8rem;
+  font-size: 0.7rem;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(30,25,18,0.92);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &.open { display: flex; }
+
+  img {
+    max-width: 92vw;
+    max-height: 90vh;
+    border-radius: 4px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    cursor: default;
+  }
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+
+  &:hover { background: rgba(255,255,255,0.22); }
+}
+
+.lightbox-caption {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}

@@ -1,0 +1,49 @@
+<!-- Page: Archive -->
+{% assign site_data = site.data.site %}
+<section class="page-section" id="page-archive">
+  <div class="section-inner">
+    <h2 class="section-h2">时光印记</h2>
+    <div class="section-ornament"></div>
+    <p class="section-h2-en">Digital Archaeology</p>
+
+    <div class="story-block fade-up">
+      <p class="lead">以下截图来自 Internet Archive 的 Wayback Machine——互联网的"时光机"。对于中国大陆的访客而言，这些存档尤为珍贵，因为 Wayback Machine 本身无法直接访问。我们将这些截图以"数字考古文物"的形式呈现——不是复原，而是致敬。</p>
+    </div>
+
+    {% for ss in site_data.screenshots %}
+    <div class="screenshot-frame fade-up" data-lightbox="{{ ss.file | relative_url }}" data-caption="{{ ss.caption }}">
+      <div class="frame-toolbar">
+        <span class="frame-dot r"></span><span class="frame-dot y"></span><span class="frame-dot g"></span>
+        <span class="frame-url">{{ ss.url }}</span>
+      </div>
+      <div class="frame-body">
+        <div class="frame-img-wrap">
+          <img src="{{ ss.file | relative_url }}" alt="{{ ss.caption }}" loading="lazy">
+          <span class="frame-zoom-hint">🔍 点击放大</span>
+        </div>
+        <div class="frame-info">
+          <h4>{{ ss.info.title }}</h4>
+          <p>{{ ss.info.intro }}</p>
+          <ul>
+            {% for d in ss.info.details %}
+              <li>{{ d }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+    <!-- Original assets gallery -->
+    <h3 style="font-family:var(--font-display);text-align:center;margin:3rem 0 1.5rem;font-size:1.1rem;">原始网站素材</h3>
+    <p style="text-align:center;color:var(--muted);font-size:0.85rem;margin-bottom:1.5rem;">以下是从 Wayback Machine 存档中提取的原始图片——它们是那个时代的像素见证。</p>
+    <div style="display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;align-items:center;" class="stagger">
+      {% for asset in site_data.original_assets %}
+        <div class="fade-up" style="text-align:center;">
+          <img src="{{ asset.file | relative_url }}" alt="{{ asset.caption }}" style="border:1px solid var(--gold-light);border-radius:4px;padding:0.5rem;background:var(--cream);">
+          <p style="font-size:0.7rem;color:var(--muted);margin-top:0.3rem;">{{ asset.caption }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

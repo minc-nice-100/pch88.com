@@ -1,0 +1,48 @@
+# ============================================================
+# pch88.com — Jekyll Configuration
+# ============================================================
+
+title: 鹏城 — 蓬城交友中心
+description: 蓬城交友中心 · 1999–2026 — 一个校园交友网站的纪念
+baseurl: ""
+url: "https://pch88.com"
+
+# Build settings
+markdown: kramdown
+plugins: []
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Collections (not needed for pages, index.md is at root)
+collections: {}
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Exclude from build
+exclude:
+  - README.md
+  - LICENSE
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .gitignore
+  - .claude
+  - CLAUDE.md
+  - preview.png
+  - logo.png
+  - logo_original.png
+  - index.html
+
+keep_files:
+  - assets
+  - js

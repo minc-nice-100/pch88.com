@@ -1,0 +1,38 @@
+<!-- Page: Home -->
+{% assign site_data = site.data.site %}
+<section class="page-section active" id="page-home">
+  <div class="hero-wrap">
+    <div class="hero-dots"></div>
+    <div class="hero-content">
+      <img class="hero-logo" src="{{ '/assets/logo.jpg' | relative_url }}" alt="蓬城网站"
+           onerror="this.style.display='none'">
+      <h1 class="hero-tagline">{{ site_data.tagline }}</h1>
+      <p class="hero-sub">{{ site_data.subtitle }}</p>
+      <span class="hero-badge">EST. {{ site_data.founded }}</span>
+      <p class="hero-poem">
+        二十世纪末，一群广东大学生在宿舍里搭建了一个网站。<br>
+        那是中国互联网的黎明——<em>没有微信，没有微博</em>，<br>
+        只有拨号上网的滋滋声，和一颗颗渴望连接的心。<br>
+        <br>
+        二十余年后，创始人的儿子重新注册了这个域名。<br>
+        <em>一代人搭建，一代人寻回。</em>
+      </p>
+    </div>
+    <div class="scroll-hint">↓ 向下滚动，回到 1999</div>
+  </div>
+
+  <div class="section-inner">
+    <div class="stats-row stagger">
+      {% for stat in site_data.stats %}
+        <div class="stat-item fade-up"><div class="stat-num">{{ stat.num }}</div><div class="stat-lbl">{{ stat.label }}</div></div>
+      {% endfor %}
+    </div>
+
+    <div class="story-block fade-up">
+      <p class="lead">蓬城交友中心，一个诞生于 1999 年的校园交友网站，由五邑大学蓬城俱乐部的几位大学生——伍柳昌、吴锋成、苏华胜、廖海涛——用 ASP 搭建而成。在那个"网友"还是个新鲜词的年代，这个小小的网站连接了江门七所高校的 4000 多名学生。</p>
+      <p>它有社区论坛，有聊天室，有留言簿，有娱乐新闻，还有那个年代最时髦的"网际寻友"功能。联系地址是"五邑大学蓬城俱乐部 AP99081 信箱"——那是一个连手机都尚未普及的时代，大学生的联系方式还是信箱编号和寻呼机号码。</p>
+      <p>2004 年前后，随着 QQ、校内网等大型平台的崛起，蓬城交友中心悄然下线。域名后来易主，2019 年曾在易名中国挂牌出售，标价 ¥5,000。</p>
+      <p>2026 年，创始人的儿子重新注册了 pch88.com 和 鹏城.com。一段尘封 20 余年的记忆，透过 Internet Archive 的 Wayback Machine，重新浮现在世人面前。</p>
+    </div>
+  </div>
+</section>

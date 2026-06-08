@@ -1,0 +1,14 @@
+# Navigation items
+- id: home
+  label: 蓬城
+  home: true
+- id: about
+  label: 关于蓬城
+- id: archive
+  label: 时光印记
+- id: founder
+  label: 创始人说
+- id: timeline-page
+  label: 时代回响
+- id: colophon
+  label: 关于本站
