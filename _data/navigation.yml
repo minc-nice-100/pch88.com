@@ -6,6 +6,8 @@
   label: 关于蓬城
 - id: archive
   label: 时光印记
+- id: dig
+  label: 考古手记
 - id: founder
   label: 创始人说
 - id: timeline-page

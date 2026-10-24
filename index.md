@@ -7,6 +7,7 @@ permalink: /
 {% include page-home.html %}
 {% include page-about.html %}
 {% include page-archive.html %}
+{% include page-dig.html %}
 {% include page-founder.html %}
 {% include page-timeline.html %}
 {% include page-colophon.html %}

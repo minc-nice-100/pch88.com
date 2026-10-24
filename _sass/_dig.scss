@@ -1,0 +1,522 @@
+/* ============================================================
+   Dig Page — 第二批数字考古
+   ============================================================ */
+
+.dig-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 1.8rem 0 2.5rem;
+
+  span {
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    color: var(--rust);
+    background: rgba(199,91,57,0.07);
+    border: 1px solid rgba(199,91,57,0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 2rem;
+  }
+}
+
+.dig-h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 3.2rem 0 1.3rem;
+  padding-left: 0.8rem;
+  border-left: 4px solid var(--rust);
+  line-height: 1.3;
+}
+
+.dig-h4 {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+  margin: 2rem 0 0.8rem;
+  color: var(--ink);
+}
+
+.dig-note {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin: -0.4rem 0 1.5rem;
+}
+
+/* 会员增长 */
+.growth {
+  margin: 1.5rem 0 0.5rem;
+}
+
+.growth-row {
+  display: grid;
+  grid-template-columns: 72px 1fr 78px;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.7rem;
+}
+
+.growth-date {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.growth-track {
+  height: 26px;
+  background: rgba(180,160,130,0.12);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.growth-bar {
+  height: 100%;
+  width: var(--w);
+  min-width: 4px;
+  background: linear-gradient(90deg, var(--rust-light), var(--rust));
+  border-radius: 3px;
+  animation: growBar 1.1s var(--ease) both;
+}
+
+@keyframes growBar {
+  from { width: 0; }
+  to { width: var(--w); }
+}
+
+.growth-num {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--rust);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 虚拟经济 */
+.eco-card {
+  background: linear-gradient(160deg, #fffdf7, var(--cream));
+  border: 1px solid var(--gold-light);
+  border-radius: 10px;
+  padding: 1.6rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  margin: 1.4rem 0;
+}
+
+.eco-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px dashed rgba(180,160,130,0.45);
+}
+
+.eco-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.eco-badge {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  border: 1px solid var(--gold-light);
+  border-radius: 2rem;
+  padding: 0.15rem 0.6rem;
+}
+
+.eco-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+  margin: 1.1rem 0;
+
+  div {
+    text-align: center;
+    padding: 0.6rem 0.2rem;
+    background: rgba(232,213,176,0.16);
+    border-radius: 4px;
+
+    b {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      color: var(--rust);
+      line-height: 1.2;
+    }
+
+    span {
+      font-size: 0.68rem;
+      color: var(--muted);
+    }
+  }
+}
+
+.eco-body p {
+  font-size: 0.9rem;
+  color: var(--ink-light);
+  line-height: 1.85;
+  margin-bottom: 0.6rem;
+
+  strong { color: var(--ink); }
+}
+
+.eco-quote {
+  margin-top: 0.9rem;
+  padding: 0.7rem 0.9rem;
+  background: rgba(199,91,57,0.05);
+  border-left: 3px solid var(--rust-light);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--rust-dark);
+
+  cite {
+    display: block;
+    margin-top: 0.3rem;
+    font-family: var(--font-body);
+    font-style: normal;
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+}
+
+/* 富翁表 */
+.money-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--gold-light);
+  border-radius: 6px;
+  background: #fffdf8;
+  margin: 1rem 0 1.2rem;
+}
+
+.money-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+  white-space: nowrap;
+
+  th, td {
+    padding: 0.55rem 0.7rem;
+    text-align: right;
+    border-bottom: 1px solid rgba(180,160,130,0.18);
+    font-variant-numeric: tabular-nums;
+  }
+
+  th {
+    background: rgba(232,213,176,0.28);
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 0.72rem;
+    text-align: right;
+  }
+
+  th:nth-child(1), td:nth-child(1),
+  th:nth-child(2), td:nth-child(2) { text-align: left; }
+
+  td:nth-child(2) { color: var(--ink); font-weight: 600; }
+  td:nth-child(3) { color: var(--rust); font-weight: 700; }
+
+  tbody tr:hover { background: rgba(232,213,176,0.14); }
+  tbody tr:last-child td { border-bottom: none; }
+}
+
+/* 论坛地图 */
+.board-map {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin: 1.2rem 0 2rem;
+}
+
+.board-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.board-label {
+  flex: 0 0 46px;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.board-chip {
+  font-size: 0.74rem;
+  color: var(--ink-light);
+  background: var(--cream);
+  border: 1px solid var(--gold-light);
+  border-radius: 3px;
+  padding: 0.2rem 0.5rem;
+  transition: 0.25s;
+
+  &:hover {
+    color: var(--rust);
+    border-color: var(--rust-light);
+    background: rgba(199,91,57,0.05);
+  }
+}
+
+/* 线下活动 */
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin: 1.2rem 0 2rem;
+}
+
+.event-card {
+  display: flex;
+  gap: 1rem;
+  background: var(--cream);
+  border: 1px solid var(--gold-light);
+  border-radius: 6px;
+  padding: 1rem 1.1rem;
+}
+
+.event-date {
+  flex: 0 0 78px;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--rust);
+  line-height: 1.5;
+  padding-top: 0.1rem;
+}
+
+.event-body {
+  h4 {
+    font-family: var(--font-display);
+    font-size: 0.98rem;
+    margin-bottom: 0.35rem;
+  }
+
+  p {
+    font-size: 0.84rem;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+}
+
+/* 域名漂流 */
+.domain-drift {
+  position: relative;
+  margin: 1.5rem 0 2rem;
+  padding-left: 1.1rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 5.2rem;
+    top: 0.8rem;
+    bottom: 0.8rem;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--gold-light), var(--rust-light), var(--gold-light));
+  }
+}
+
+.drift-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4rem 1.4rem 1fr;
+  align-items: start;
+  gap: 0.5rem;
+  margin-bottom: 1.3rem;
+
+  &.highlight .drift-year { color: var(--rust); }
+  &.highlight .drift-dot {
+    background: var(--rust);
+    box-shadow: 0 0 0 4px rgba(199,91,57,0.14);
+  }
+}
+
+.drift-year {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--gold);
+  text-align: right;
+  padding-top: 0.12rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.drift-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--rust-light);
+  margin-top: 0.32rem;
+  justify-self: center;
+  z-index: 1;
+}
+
+.drift-text {
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  line-height: 1.8;
+
+  em { color: var(--rust-dark); font-style: normal; font-weight: 600; }
+}
+
+/* 技术遗迹 */
+.relic-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.2rem 0 2rem;
+}
+
+.relic-card {
+  background: var(--cream);
+  border: 1px solid var(--gold-light);
+  border-radius: 6px;
+  padding: 1rem 1.1rem;
+
+  b {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: var(--rust);
+    margin-bottom: 0.4rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  code {
+    font-size: 0.72rem;
+    background: rgba(180,160,130,0.14);
+    padding: 0.05rem 0.3rem;
+    border-radius: 2px;
+    color: var(--ink-light);
+    word-break: break-all;
+  }
+}
+
+/* 新档案画廊 */
+.dig-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin: 1.2rem 0 2.5rem;
+}
+
+.dig-shot {
+  margin: 0;
+  background: #fffef9;
+  border: 1px solid var(--gold-light);
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    object-position: top center;
+    border-bottom: 1px solid rgba(180,160,130,0.2);
+  }
+
+  figcaption {
+    padding: 0.6rem 0.8rem;
+
+    b {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      color: var(--rust);
+      margin-bottom: 0.15rem;
+    }
+
+    span {
+      font-size: 0.7rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+  }
+}
+
+/* 来源 */
+.source-box {
+  background: rgba(232,213,176,0.14);
+  border: 1px dashed var(--gold-light);
+  border-radius: 6px;
+  padding: 1.2rem 1.3rem;
+  margin-top: 2rem;
+
+  h4 {
+    font-family: var(--font-display);
+    font-size: 0.92rem;
+    margin-bottom: 0.6rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      position: relative;
+      padding-left: 1rem;
+      font-size: 0.76rem;
+      color: var(--muted);
+      line-height: 1.8;
+
+      &::before {
+        content: '·';
+        position: absolute;
+        left: 0.2rem;
+        color: var(--rust);
+        font-weight: 700;
+      }
+    }
+  }
+
+  .source-note {
+    margin-top: 0.7rem;
+    font-size: 0.72rem;
+    color: var(--muted);
+
+    code {
+      font-size: 0.7rem;
+      background: rgba(180,160,130,0.16);
+      padding: 0.05rem 0.3rem;
+      border-radius: 2px;
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .growth-row { grid-template-columns: 58px 1fr 64px; gap: 0.5rem; }
+  .growth-num { font-size: 0.88rem; }
+  .eco-stats { grid-template-columns: 1fr 1fr; }
+  .relic-grid { grid-template-columns: 1fr; }
+  .dig-gallery { grid-template-columns: 1fr; }
+  .dig-shot img { height: 190px; }
+  .event-card { flex-direction: column; gap: 0.4rem; }
+  .event-date { flex: none; }
+  .domain-drift { padding-left: 0; }
+  .domain-drift::before { left: 4.55rem; }
+  .drift-item { grid-template-columns: 3.5rem 1.2rem 1fr; gap: 0.4rem; }
+  .drift-text { font-size: 0.8rem; }
+  .board-label { flex-basis: 100%; margin-top: 0.3rem; }
+}
+

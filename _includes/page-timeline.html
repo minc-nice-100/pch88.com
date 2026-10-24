@@ -6,7 +6,13 @@
     <p class="section-h2-en">Echoes of an Era</p>
 
     <div class="story-block fade-up">
-      <p class="lead">蓬城交友中心的故事，恰好映射了中国互联网从萌芽到繁荣的整个历程。一个校园网站的生与灭，是一个时代的注脚。</p>
+      <p class="lead">这一页不只想写“中国网民增长到多少亿”。我们把两条线放在一起：一条是中国互联网的宏大叙事，一条是蓬城留言簿里具体的人。</p>
+      <p>宏观的数字会被记住，但真正让人共鸣的，往往是某个下午的一条留言——学校刚装了 ADSL、网吧里在打星际、有人找不到工作、有人要求开放商店和教堂。大时代决定了小网站的命运；小网站保存了大时代的体温。</p>
+    </div>
+
+    <div class="tl-legend fade-up">
+      <span class="lg-macro">大时代</span>
+      <span class="lg-micro">蓬城此刻</span>
     </div>
 
     <div class="timeline stagger">
@@ -14,25 +20,55 @@
         <div class="tl-item{% if item.highlight %} highlight{% endif %} fade-up">
           <div class="tl-year">{{ item.year }}</div>
           <div class="tl-title">{{ item.title }}</div>
-          <div class="tl-desc">{{ item.desc }}</div>
+          <div class="tl-desc">{{ item.macro }}</div>
+          {% if item.pengcheng %}
+            <div class="tl-micro">
+              <span class="tl-micro-tag">蓬城此刻</span>
+              <p>{{ item.pengcheng }}</p>
+            </div>
+          {% endif %}
+          {% if item.quote %}
+            <blockquote class="tl-quote">{{ item.quote }}</blockquote>
+          {% endif %}
         </div>
       {% endfor %}
     </div>
 
-    <h3 style="font-family:var(--font-display);text-align:center;margin:3rem 0 1.5rem;font-size:1.2rem;">两个时代的对话</h3>
-    <div class="era-grid stagger">
-      <div class="era-card fade-up">
-        <h3>1999 年的互联网</h3>
-        <p>拨号上网，56K 猫发出刺耳的握手声。打开一个网页需要几十秒，图片一行一行地加载。但每一次连接都充满仪式感。</p>
-        <p>"网友"是一个神秘而浪漫的词汇。人们在聊天室里用文字认识彼此，在留言簿上写下真诚的问候。没有算法推荐，没有信息茧房——你看到什么，取决于你点击了什么。</p>
-        <p>蓬城交友中心的 4139 名会员，就是这第一批"数字移民"的缩影。</p>
+    <h3 class="dig-h3 fade-up">大时代里的小事</h3>
+    <p class="dig-note fade-up">这些句子没有写进任何互联网史，但它们比“网民规模”更能说明，2001 年的中国大学生是怎么上网的。</p>
+
+    <div class="micro-grid fade-up">
+      <div class="micro-card">
+        <p class="mc-quote">“我地学校装左 ADSL 啦！”</p>
+        <p class="mc-ctx">2001-12-06，站长 aaron 在留言簿里宣布。那一年，宿舍里还在用 56K 猫拨号，ADSL 是一件值得发一条公开留言的大事。</p>
       </div>
-      <div class="era-card fade-up">
-        <h3>今天的互联网</h3>
-        <p>5G、光纤、Wi-Fi 6。网页秒开，视频即播。我们拥有了蓬城创始人们无法想象的技术能力。</p>
-        <p>但我们也失去了一些东西：那种拨号上网的期待感，那种在聊天室里偶遇陌生人的惊喜，那种在留言簿上看到新回复的快乐。</p>
-        <p>蓬城交友中心提醒我们：互联网的初心，是连接人与人。</p>
+      <div class="micro-card">
+        <p class="mc-quote">“强烈要求开放商店,教堂!!”</p>
+        <p class="mc-ctx">2002 年，会员“豪鬼”在社区总部发帖。蓬城有银行、赌场，却还没有商店和教堂——一个虚拟社区开始长出自己的生活秩序。</p>
       </div>
+      <div class="micro-card">
+        <p class="mc-quote">“神啊！救救我吧！”</p>
+        <p class="mc-ctx">2002-07-31，托管在 pch88.com/9803/ 下的“青竹园”留言簿里，大雄写自己还没找到工作。同一天，另一个留言说“163 的免费空间就要没了”。</p>
+      </div>
+      <div class="micro-card">
+        <p class="mc-quote">“榜首 ht1885，总资产 193,824 NG”</p>
+        <p class="mc-ctx">2002-04-24 的十大富翁榜。他注册仅两个月，资产接近 20 万——大概率发现了银行利息或赌场的漏洞。这是最早的“羊毛党”记忆。</p>
+      </div>
+      <div class="micro-card">
+        <p class="mc-quote">“相片不能超过 5 张”</p>
+        <p class="mc-ctx">2002-08-12，站长通告：因“网络速度和网络空间”限制，每人最多上传 5 张照片。那是一个需要为一张 JPEG 精打细算的年代。</p>
+      </div>
+      <div class="micro-card">
+        <p class="mc-quote">“星际。罗马大赛即将举行”</p>
+        <p class="mc-ctx">2001-10-11，娱乐星闻头条。星际争霸和帝国时代·罗马复兴，是网吧局域网时代的两款“国民游戏”。蓬城把它办成了线下比赛。</p>
+      </div>
+    </div>
+
+    <div class="story-block fade-up" style="margin-top:2.5rem;">
+      <p class="lead">蓬城没有等到移动互联网，也没有等到算法时代。</p>
+      <p>它消失的 2004 年，腾讯刚在香港上市，淘宝刚满一岁，微信还要再等七年。此后的中国互联网一路向上：博客、微博、微信、4G、短视频、移动支付、大模型。与此同时，墙越建越高，平台越来越大，个人网站几乎绝迹。</p>
+      <p>2014 年，境外社交平台在中国大陆进一步收紧；2019 年，“学习强国”上线，5G 商用。今天的大学生很难想象，2001 年的人会为了学校装了 ADSL 而在一个公开留言簿上欢呼。但正是这些微小的、具体的快乐，构成了中国互联网最初的样子。</p>
+      <p>蓬城的故事没有宏大的结局。它只是提醒我们：在“网民规模”“渗透率”“日活”这些词出现之前，互联网曾经是一群年轻人互相认识的地方。</p>
     </div>
   </div>
 </section>

@@ -38,6 +38,7 @@ exclude:
   - .gitignore
   - .claude
   - CLAUDE.md
+  - workdir
   - preview.png
   - logo.png
   - logo_original.png

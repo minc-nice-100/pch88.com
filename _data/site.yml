@@ -33,12 +33,12 @@ team:
 stats:
   - num: 1999
     label: 网站成立
-  - num: "4,139"
-    label: 注册会员
+  - num: "13,397"
+    label: 峰值会员（2003）
   - num: 7
     label: 江门高校
-  - num: 73
-    label: 时光机存档
+  - num: 67
+    label: 首页存档
   - num: 26+
     label: 年历史跨度
 
@@ -53,7 +53,7 @@ audio:
 wayback:
   earliest_url: https://web.archive.org/web/20010308192901/http://www.pch88.com/
   all_snapshots_url: https://web.archive.org/web/*/http://www.pch88.com/
-  snapshot_count: 73
+  snapshot_count: 67
 
 # Screenshots
 screenshots:
@@ -81,6 +81,32 @@ screenshots:
         - "QQ 注册用户突破 1 亿"
         - "中国网民约 4,580 万"
         - "博客概念刚刚传入中国"
+  - date: 2002年9月28日
+    file: assets/2002.9.28.png
+    url: web.archive.org/web/20020928063135/http://www.pch88.com/
+    caption: 蓬城交友中心 · 2002年9月28日 · Wayback Machine
+    info:
+      title: 2002 年 9 月 28 日
+      intro: 会员数已从 4,139 涨到 9,756。导航里多了一个“短信中心”，首页也挂上了与盈东网吧合作的公告——
+      details:
+        - "会员总数：9,756 人"
+        - "新增栏目：短信中心（网易短信联盟）"
+        - "公告：与盈东网吧结成合作伙伴"
+        - "公告：2001 年 6·30 主机事故说明"
+        - "业务电话：0750-8675483 梁生"
+  - date: 2003年5月27日
+    file: assets/2003.5.27.png
+    url: web.archive.org/web/20030527021957/http://www.pch88.com/
+    caption: 蓬城交友中心 · 2003年5月27日 · Wayback Machine
+    info:
+      title: 2003 年 5 月 27 日
+      intro: 目前能找到的最后一个仍在运营的首页快照。会员达到 13,397，站点已开始承接企业建站——
+      details:
+        - "会员总数：13,397 人"
+        - "公告：留言板重新开放"
+        - "企业案例：江门金域电脑、金信植绒机厂"
+        - "企业案例：俊力五金工艺厂、中山先锋电器厂"
+        - "网管：Aaron，QQ 12375596"
 
 # Original assets gallery
 original_assets:
@@ -105,7 +131,10 @@ features:
     desc: 基于 ASP 的实时聊天室。没有表情包，没有语音，只有文字——但足以让五邑大学的夜晚不再寂寞。
   - icon: 📝
     title: 留言簿
-    desc: Guestbook——Web 1.0 时代的标志性功能。每一条留言都是公开的，每一个签名都带着那个年代特有的真诚。
+    desc: Guestbook——Web 1.0 时代的标志性功能。蓬城的留言簿留下了 431 条公开留言，从“我帮学校做了一个网站”到“我地学校装左 ADSL 啦”。
+  - icon: 🪙
+    title: 虚拟社区
+    desc: 注册送 500 NG 和 30 点魅力。发帖、加精、被回复都能赚钱；社区里有银行、赌场、商店和教堂，还有一份“十大富翁榜”。
   - icon: 🎬
     title: 娱乐星闻
     desc: 刘德华、梁朝伟、周润发争影帝；谢霆锋拍可口可乐广告——2001 年的娱乐圈，通过这个小小的页面传到了江门大学生的屏幕前。
@@ -116,9 +145,9 @@ about_stats:
     label: 创始人
   - num: 7
     label: 覆盖高校
-  - num: "4,139"
-    label: 注册会员
-  - num: 2000
+  - num: "13,397"
+    label: 峰值会员
+  - num: 1999
     label: 创办年份
 
 # Colophon cards
@@ -128,10 +157,10 @@ colophon_cards:
     desc: 朴树《那些花儿》—— 一首属于那个时代的歌。1999 年发行，与蓬城交友中心同岁。
   - icon: 📦
     title: 历史资料
-    desc: 所有截图和原始素材来源于 Internet Archive 的 Wayback Machine，共 73 次存档记录。
+    desc: 所有截图和原始素材来源于 Internet Archive 的 Wayback Machine，首页共 67 次成功存档。
   - icon: 🔗
     title: 域名
-    desc: pch88.com · 鹏城.com —— 两个域名于 2026 年由创始人儿子重新注册。
+    desc: pch88.com 于 2004 年出现在 Sedo 停放页，标价 10,000 美元；鹏城.com 至迟 2011 年已被域名投资人持有。两个域名于 2026 年由创始人儿子购回。
   - icon: 💡
     title: 技术
     desc: HTML + CSS + JS，PJAX 导航 + History API。无需服务器，纯静态部署。
